@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<div>
+		<button id="startMatchesUrlsScrapping">Start Matches Urls Scrapping</button>
+	</div>
+
+	<script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+	<script type="text/javascript">
+		function startEventGrabbing(events_to_search)
+		{	
+		}
+
+
+		$(document).ready(function(){
+			$("#startMatchesUrlsScrapping").click(function(){
+				var matches_urls_info_object = {
+					start_matches_urls_scrapping : true,
+					handled_matches_urls : [],
+					handled_years_urls : [],
+					matches_urls_result : []
+				}
+
+				chrome.storage.local.set({ matches_urls_info_object : matches_urls_info_object }, function(){
+  				});		
+
+			});	
+		});
+	</script>
+</body>
+</html>

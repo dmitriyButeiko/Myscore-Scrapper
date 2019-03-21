@@ -1,0 +1,27 @@
+{
+
+	"manifest_version": 2,
+
+	"name": "Tennis Matches Scrapper",
+	"description": "Tennis Matches Scrapper",
+	"version": "1.0",
+	"offline_enabled": true,
+	"converted_from_user_script": true,
+ 	"browser_action": {
+      "default_title": "Tennis Matches Scrapper",
+      "default_popup": "popup.html"
+    },
+  "content_scripts": [
+      {
+        "matches": ["https://*.eredmenyek.com/*"],
+        "all_frames": true,
+        "js": ["js/jquery-2.2.4.min.js", "contentScript.js"]
+      }
+  ],
+
+  "background": {
+    "scripts": ["background.js"]
+  },
+
+	"permissions": ["tabs","storage","https://*.eredmenyek.com/*"]
+}
